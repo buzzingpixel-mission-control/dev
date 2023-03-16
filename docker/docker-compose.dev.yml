@@ -12,6 +12,7 @@ services:
     volumes:
       - ./backend/.bash_history:/root/.bash_history:delegated
       - ../backend:/var/www:delegated
+      - ../../backend-core:/backend-core
     labels:
       ## Traefik config ##
       - traefik.enable=true

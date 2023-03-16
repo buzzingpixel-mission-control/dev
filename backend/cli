@@ -1,4 +1,14 @@
 #!/usr/bin/env php
 <?php
 
-echo 'here';
+use MissionControlBackend\Boot;
+
+require __DIR__ . '/vendor/autoload.php';
+
+(new Boot())
+    ->start(devMode: true)
+    ->registerEvents()
+    ->buildContainer()
+    ->buildCliApplication()
+    ->applyCommands()
+    ->run();

@@ -1,11 +1,20 @@
 {
     "name": "buzzingpixel/mission-control",
     "license": "proprietary",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/backend-core"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "ext-oauth": "*",
         "ext-pdo": "*",
-        "ext-redis": "*"
+        "ext-redis": "*",
+        "buzzingpixel/mission-control-backend-core": "dev-main"
     },
     "require-dev": {
         "doctrine/coding-standard": "^11.1",
