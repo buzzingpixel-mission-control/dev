@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  backend:
+    restart: always
+    environment:
+      - ENABLE_PHP_DEV_CONFIG=1
+      - ENABLE_XDEBUG=1
+    container_name: mission_control_backend
+    healthcheck:
+      disable: true
+    volumes:
+      - ./backend/.bash_history:/root/.bash_history:delegated
+      - ../backend:/var/www:delegated
+    labels:
+      ## Traefik config ##
+      - traefik.enable=true
+      - traefik.docker.network=traefik-dev_default
+      # API
+      - traefik.http.routers.mission_control_api.entrypoints=web
+      - traefik.http.routers.mission_control_api.rule=Host(`api.mission-control.localtest.me`)
+      - traefik.http.routers.mission_control_api.middlewares=https-redirect
+      - traefik.http.routers.mission_control_api-secure.entrypoints=websecure
+      - traefik.http.routers.mission_control_api-secure.tls=true
+      - traefik.http.routers.mission_control_api-secure.rule=Host(`api.mission-control.localtest.me`)
+      # Auth
+      - traefik.http.routers.mission_control_auth.entrypoints=web
+      - traefik.http.routers.mission_control_auth.rule=Host(`auth.mission-control.localtest.me`)
+      - traefik.http.routers.mission_control_auth.middlewares=https-redirect
+      - traefik.http.routers.mission_control_auth-secure.entrypoints=websecure
+      - traefik.http.routers.mission_control_auth-secure.tls=true
+      - traefik.http.routers.mission_control_auth-secure.rule=Host(`auth.mission-control.localtest.me`)
+      # Auth
+      - traefik.http.routers.mission_control_account.entrypoints=web
+      - traefik.http.routers.mission_control_account.rule=Host(`account.mission-control.localtest.me`)
+      - traefik.http.routers.mission_control_account.middlewares=https-redirect
+      - traefik.http.routers.mission_control_account-secure.entrypoints=websecure
+      - traefik.http.routers.mission_control_account-secure.tls=true
+      - traefik.http.routers.mission_control_account-secure.rule=Host(`account.mission-control.localtest.me`)
+    networks:
+      - traefik
+      - default
+
+networks:
+  traefik:
+    name: traefik-dev_default
+    external: true

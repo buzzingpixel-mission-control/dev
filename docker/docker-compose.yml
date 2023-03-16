@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  backend:
+    deploy:
+      rollback_config:
+        order: start-first
+      update_config:
+        order: start-first
+    env_file:
+      - ./backend/.env
+      - ./backend/.env.local
+    image: ghcr.io/buzzingpixel-mission-control/mission-control-backend
+    environment:
+      - HOSTNAME=mission_control_backend
+    networks:
+      - default
