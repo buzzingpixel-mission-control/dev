@@ -13,6 +13,7 @@ services:
       - ./backend/.bash_history:/root/.bash_history:delegated
       - ../backend:/var/www:delegated
       - ../../backend-core:/backend-core
+      - ../../idp:/idp
     labels:
       ## Traefik config ##
       - traefik.enable=true

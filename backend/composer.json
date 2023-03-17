@@ -7,6 +7,10 @@
         {
             "type": "path",
             "url": "/backend-core"
+        },
+        {
+            "type": "path",
+            "url": "/idp"
         }
     ],
     "require": {
@@ -15,6 +19,7 @@
         "ext-pdo": "*",
         "ext-redis": "*",
         "buzzingpixel/mission-control-backend-core": "dev-main",
+        "buzzingpixel/mission-control-idp": "dev-main",
         "crell/envmapper": "^1.0"
     },
     "require-dev": {

@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Config\Dependencies\DependencyBindings;
 use Config\EventRegistration;
 use Crell\EnvMapper\EnvMapper;
 use MissionControlBackend\Boot;
@@ -14,7 +15,7 @@ $mapper = new EnvMapper();
 
 (new Boot())
     ->start(config: $mapper->map(CoreConfig::class))
-    ->buildContainer()
+    ->buildContainer(register: [DependencyBindings::class, 'register'])
     ->registerEvents(register: [EventRegistration::class, 'register'])
     ->buildHttpApplication()
     ->applyRoutes(routesConfig: $mapper->map(HttpRoutesConfig::class))

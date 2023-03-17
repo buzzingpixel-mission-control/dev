@@ -34,9 +34,24 @@
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/crell/envmapper" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/qiq/qiq" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/laminas/laminas-escaper" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/defuse/php-encryption" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/psr/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/psr/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/var-exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/lcobucci/jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/lcobucci/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/league/oauth2-server" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/league/uri-interfaces" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/spatie/php-cloneable" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/cache-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/league/uri" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/league/event" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Mission Control Backend Core" />
+    <orderEntry type="module" module-name="MissionControlIdp" />
   </component>
 </module>

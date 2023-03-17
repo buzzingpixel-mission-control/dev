@@ -15,3 +15,21 @@ services:
       - HOSTNAME=mission_control_backend
     networks:
       - default
+
+  redis:
+    deploy:
+      rollback_config:
+        order: start-first
+      update_config:
+        order: start-first
+    container_name: mission_control_redis
+    image: redis:6.2.10-alpine3.17
+    volumes:
+      - redis:/data
+    networks:
+      default:
+        aliases:
+          - mission_control_redis
+
+volumes:
+  redis:
