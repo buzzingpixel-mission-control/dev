@@ -8,6 +8,7 @@ export default class BackendPreUpProvisioning extends Command {
 
     public async run (): Promise<void> {
         const rootDir = fs.realpathSync(`${this.config.root}/../`);
+        const parentDir = fs.realpathSync(`${rootDir}/../`);
 
         this.log(chalk.cyan('Running backend provisioning…'));
 
@@ -17,6 +18,7 @@ export default class BackendPreUpProvisioning extends Command {
                     --entrypoint "" \
                     --name api-provision \
                     -v ${rootDir}/backend:/var/www \
+                    -v ${parentDir}/backend-core:/backend-core \
                     -w /var/www \
                     ghcr.io/buzzingpixel-mission-control/mission-control-backend bash -c "composer install";
             `,

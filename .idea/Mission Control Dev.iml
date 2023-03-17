@@ -31,6 +31,9 @@
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/slim/slim" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/slim/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/nikic/fast-route" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/crell/envmapper" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/qiq/qiq" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/laminas/laminas-escaper" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

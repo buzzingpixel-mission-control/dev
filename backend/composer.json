@@ -14,7 +14,8 @@
         "ext-oauth": "*",
         "ext-pdo": "*",
         "ext-redis": "*",
-        "buzzingpixel/mission-control-backend-core": "dev-main"
+        "buzzingpixel/mission-control-backend-core": "dev-main",
+        "crell/envmapper": "^1.0"
     },
     "require-dev": {
         "doctrine/coding-standard": "^11.1",
