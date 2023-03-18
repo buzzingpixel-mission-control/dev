@@ -5,6 +5,7 @@ import chalk from 'chalk';
 import EnsureDevFiles from './ensure-dev-files';
 import Build from './build';
 import BackendPreUpProvisioning from './backend-pre-up-provisioning';
+import GenerateSshKey from '../dev/generate-ssh-key';
 
 export default class Up extends Command {
     public static summary = 'Brings Docker environment online and runs provisioning as necessary';
@@ -17,6 +18,9 @@ export default class Up extends Command {
 
         const EnsureDevFilesC = new EnsureDevFiles(this.argv, this.config);
         await EnsureDevFilesC.run();
+
+        const GenerateSshKeyC = new GenerateSshKey(this.argv, this.config);
+        await GenerateSshKeyC.run();
 
         const hasBuilt = fs.existsSync(hasBuiltFile);
 
