@@ -23,6 +23,7 @@
         "crell/envmapper": "^1.0"
     },
     "require-dev": {
+        "buzzingpixel/symfony-var-dumper-decorator": "dev-main",
         "doctrine/coding-standard": "^11.1",
         "filp/whoops": "^2.14",
         "phpstan/phpstan": "^1.10",

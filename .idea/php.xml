@@ -76,6 +76,7 @@
       <path value="$PROJECT_DIR$/backend/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/backend/vendor/league/uri" />
       <path value="$PROJECT_DIR$/backend/vendor/league/event" />
+      <path value="$PROJECT_DIR$/backend/vendor/buzzingpixel/symfony-var-dumper-decorator" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
