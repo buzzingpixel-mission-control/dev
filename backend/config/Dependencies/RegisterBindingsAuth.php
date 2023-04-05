@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace Config\Dependencies;
 
+use Config\RuntimeConfig;
+use Config\RuntimeConfigOptions;
 use Config\SshKeys\SshKeys;
-use Crell\EnvMapper\EnvMapper;
 use DateInterval;
 use MissionControlBackend\ContainerBindings;
 use MissionControlIdp\AuthorizationServerFactoryConfig;
@@ -19,23 +20,27 @@ class RegisterBindingsAuth
 {
     public static function register(ContainerBindings $containerBindings): void
     {
-        $mapper = new EnvMapper();
-
-        $authConfig = $mapper->map(AuthConfig::class);
+        $runtimeConfig = new RuntimeConfig();
 
         $containerBindings->addBinding(
             ClientsConfig::class,
             new ClientsConfig(new ClientCollection(
                 clients: [
                     new Client(
-                        $authConfig->missionControlWebClientId,
-                        $authConfig->missionControlWebClientName,
+                        $runtimeConfig->getString(
+                            RuntimeConfigOptions::MISSION_CONTROL_WEB_CLIENT_ID,
+                        ),
+                        'Mission Control Web Client',
                         explode(
                             ',',
-                            $authConfig->missionControlWebClientRedirectUris,
+                            $runtimeConfig->getString(
+                                RuntimeConfigOptions::MISSION_CONTROL_WEB_CLIENT_REDIRECT_URIS,
+                            ),
                         ),
-                        $authConfig->isConfidential,
-                        $authConfig->missionControlWebClientSecret,
+                        true,
+                        $runtimeConfig->getString(
+                            RuntimeConfigOptions::MISSION_CONTROL_WEB_CLIENT_SECRET,
+                        ),
                     ),
                 ],
             )),
@@ -43,13 +48,13 @@ class RegisterBindingsAuth
 
         $containerBindings->addBinding(
             AuthorizationServerFactoryConfig::class,
-            static function () use ($mapper): AuthorizationServerFactoryConfig {
-                $authServerFactoryConfig = $mapper->map(
-                    AuthorizationServerFactoryConfig::class,
-                );
-
+            static function () use (
+                $runtimeConfig,
+            ): AuthorizationServerFactoryConfig {
                 return new AuthorizationServerFactoryConfig(
-                    $authServerFactoryConfig->encryptionKey,
+                    $runtimeConfig->getString(
+                        RuntimeConfigOptions::ENCRYPTION_KEY,
+                    ),
                     SshKeys::PRIVATE_KEY_PATH,
                     SshKeys::PUBLIC_KEY_PATH,
                     new DateInterval('PT10M'),

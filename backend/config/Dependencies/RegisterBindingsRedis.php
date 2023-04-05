@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 namespace Config\Dependencies;
 
-use Crell\EnvMapper\EnvMapper;
+use Config\RuntimeConfig;
+use Config\RuntimeConfigOptions;
 use MissionControlBackend\ContainerBindings;
-use Psr\Container\ContainerInterface;
 use Redis;
-
-use function assert;
 
 class RegisterBindingsRedis
 {
@@ -17,16 +15,14 @@ class RegisterBindingsRedis
     {
         $containerBindings->addBinding(
             Redis::class,
-            static function (ContainerInterface $container): Redis {
-                $envMapper = $container->get(EnvMapper::class);
-                assert($envMapper instanceof EnvMapper);
-
-                $redisConfig = $envMapper->map(RedisConfig::class);
-                assert($redisConfig instanceof RedisConfig);
+            static function (): Redis {
+                $runtimeConfig = new RuntimeConfig();
 
                 $redis = new Redis();
 
-                $redis->connect($redisConfig->redisHost);
+                $redis->connect($runtimeConfig->getString(
+                    RuntimeConfigOptions::REDIS_HOST,
+                ));
 
                 return $redis;
             },

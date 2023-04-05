@@ -43,6 +43,16 @@ services:
       - traefik
       - default
 
+  db:
+    restart: always
+    container_name: mission_control_db
+    healthcheck:
+      disable: true
+    volumes:
+      - ./db/.bash_history:/root/.bash_history:delegated
+    ports:
+      - "56936:5432"
+
 networks:
   traefik:
     name: traefik-dev_default

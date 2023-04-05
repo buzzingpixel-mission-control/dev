@@ -15,7 +15,7 @@ class DependencyBindings
         RegisterBindingsAuth::register(containerBindings: $containerBindings);
         RegisterBindingsRedis::register(containerBindings: $containerBindings);
 
-        // Pacakge bindings
+        // Package bindings
         RegisterBindingsIdp::register(containerBindings: $containerBindings);
     }
 }

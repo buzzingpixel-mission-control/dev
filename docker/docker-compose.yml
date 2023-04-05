@@ -31,5 +31,25 @@ services:
         aliases:
           - mission_control_redis
 
+  db:
+    deploy:
+      rollback_config:
+        order: start-first
+      update_config:
+        order: start-first
+    env_file:
+      - ./db/.env
+      - ./db/.env.local
+    image: postgres:15.2
+    environment:
+      HOSTNAME: mission_control_db
+    volumes:
+      - db-volume:/var/lib/postgresql/data
+    networks:
+      default:
+        aliases:
+          - mission_control_db
+
 volumes:
+  db-volume:
   redis:

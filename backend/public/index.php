@@ -2,23 +2,19 @@
 
 declare(strict_types=1);
 
+use Config\BootHttpMiddlewareConfigFactory;
+use Config\CoreConfigFactory;
 use Config\Dependencies\DependencyBindings;
-use Config\EventRegistration;
-use Crell\EnvMapper\EnvMapper;
+use Config\Events\EventRegistration;
 use MissionControlBackend\Boot;
-use MissionControlBackend\CoreConfig;
-use MissionControlBackend\Http\HttpRoutesConfig;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
-$mapper = new EnvMapper();
-
 (new Boot())
-    ->start(config: $mapper->map(CoreConfig::class))
-    ->buildContainer(register: [DependencyBindings::class, 'register'])
-    ->registerEvents(register: [EventRegistration::class, 'register'])
+    ->start((new CoreConfigFactory())->create())
+    ->buildContainer([DependencyBindings::class, 'register'])
+    ->registerEvents([EventRegistration::class, 'register'])
     ->buildHttpApplication()
-    ->applyRoutes(routesConfig: $mapper->map(HttpRoutesConfig::class))
-    ->registerErrorHandling()
-    ->registerHttpMiddleware()
-    ->emitResponse();
+    ->applyRoutes()
+    ->applyMiddleware((new BootHttpMiddlewareConfigFactory())->create())
+    ->runApplication();
