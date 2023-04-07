@@ -14,6 +14,7 @@ services:
       - ../backend:/var/www:delegated
       - ../../backend-core:/backend-core
       - ../../idp:/idp
+      - ../../../buzzingpixel/php-queue:/php-queue
     labels:
       ## Traefik config ##
       - traefik.enable=true
@@ -53,7 +54,41 @@ services:
     ports:
       - "56936:5432"
 
+  mailhog:
+    container_name: mission_control_mailhog
+    image: 'mailhog/mailhog:v1.0.1'
+    user: root
+    environment:
+      - MH_API_BIND_ADDR=0.0.0.0:8027
+      - MH_UI_BIND_ADDR=0.0.0.0:8027
+    expose:
+      - 8027
+    ports:
+      - "8027:8027"
+    networks:
+      traefik:
+      default:
+        aliases:
+          - mission_control_mailhog
+    command: ["-storage=maildir", "-maildir-path=/maildir"]
+    volumes:
+      - mailhog-data-volume:/maildir
+    labels:
+      - traefik.enable=true
+      - traefik.port=8027
+      - traefik.docker.network=traefik-dev_default
+      - traefik.http.routers.mosaic_portal_mailhog.entrypoints=web
+      - traefik.http.routers.mosaic_portal_mailhog.rule=Host(`mailhog.mission-control.localtest.me`)
+      - traefik.http.routers.mosaic_portal_mailhog.middlewares=https-redirect
+      - traefik.http.routers.mosaic_portal_mailhog-secure.entrypoints=websecure
+      - traefik.http.routers.mosaic_portal_mailhog-secure.tls=true
+      - traefik.http.routers.mosaic_portal_mailhog-secure.rule=Host(`mailhog.mission-control.localtest.me`)
+      - traefik.http.services.mosaic_portal_mailhog-secure.loadbalancer.server.port=8027
+
 networks:
   traefik:
     name: traefik-dev_default
     external: true
+
+volumes:
+  mailhog-data-volume:

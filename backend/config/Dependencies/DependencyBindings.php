@@ -12,10 +12,12 @@ class DependencyBindings
     public static function register(ContainerBindings $containerBindings): void
     {
         // Local bindings
-        RegisterBindingsAuth::register(containerBindings: $containerBindings);
-        RegisterBindingsRedis::register(containerBindings: $containerBindings);
+        RegisterBindingsAuth::register($containerBindings);
+        RegisterBindingsCache::register($containerBindings);
+        RegisterBindingsQueue::register($containerBindings);
+        RegisterBindingsRedis::register($containerBindings);
 
         // Package bindings
-        RegisterBindingsIdp::register(containerBindings: $containerBindings);
+        RegisterBindingsIdp::register($containerBindings);
     }
 }

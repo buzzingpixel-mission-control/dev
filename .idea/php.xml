@@ -249,6 +249,37 @@
       <path value="$PROJECT_DIR$/../idp/vendor/giggsey/libphonenumber-for-php" />
       <path value="$PROJECT_DIR$/../idp/vendor/giggsey/locale" />
       <path value="$PROJECT_DIR$/../idp/vendor/moneyphp/money" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/moneyphp/money" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/buzzingpixel/valueobject-ext" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/funeralzone/valueobjects" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/giggsey/locale" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/giggsey/libphonenumber-for-php" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/league/uri" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/league/uri-interfaces" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/chrisharrison/php-array-of" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/beberlei/assert" />
+      <path value="$PROJECT_DIR$/backend/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/backend/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/lcobucci/clock" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/buzzingpixel/php-queue" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/psr/cache" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
@@ -262,6 +293,11 @@
     <option name="level" value="8" />
     <option name="memoryLimit" value="4G" />
     <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/backend/vendor/autoload.php" />
+    </phpunit_settings>
   </component>
   <component name="PsalmOptionsConfiguration">
     <option name="transferred" value="true" />
