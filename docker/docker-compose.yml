@@ -31,6 +31,46 @@ services:
         aliases:
           - mission_control_redis
 
+  queue-consumer-default-1:
+    deploy:
+      rollback_config:
+        order: start-first
+      update_config:
+        order: start-first
+    env_file:
+      - ./backend/.env
+      - ./backend/.env.local
+    image: ghcr.io/buzzingpixel-mission-control/mission-control-backend
+    environment:
+      - HOSTNAME=queue-consumer-default-1
+    networks:
+      - default
+    entrypoint: >-
+      /bin/bash -c
+      "echo 'while /usr/local/bin/php /var/www/cli buzzingpixel-queue:consume-next --verbose --no-interaction 2>&1; do sleep 1; done' > /runner.sh
+      && chmod +x /runner.sh
+      && /runner.sh"
+
+  queue-consumer-email-1:
+    deploy:
+      rollback_config:
+        order: start-first
+      update_config:
+        order: start-first
+    env_file:
+      - ./backend/.env
+      - ./backend/.env.local
+    image: ghcr.io/buzzingpixel-mission-control/mission-control-backend
+    environment:
+      - HOSTNAME=queue-consumer-email-1
+    networks:
+      - default
+    entrypoint: >-
+      /bin/bash -c
+      "echo 'while /usr/local/bin/php /var/www/cli buzzingpixel-queue:consume-next --queue-name=email --verbose --no-interaction 2>&1; do sleep 1; done' > /runner.sh
+      && chmod +x /runner.sh
+      && /runner.sh"
+
   db:
     deploy:
       rollback_config:

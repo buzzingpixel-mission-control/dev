@@ -280,6 +280,16 @@
       <path value="$PROJECT_DIR$/../backend-core/vendor/symfony/cache" />
       <path value="$PROJECT_DIR$/../backend-core/vendor/symfony/var-exporter" />
       <path value="$PROJECT_DIR$/../backend-core/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/backend/vendor/buzzingpixel/php-queue" />
+      <path value="$PROJECT_DIR$/../idp/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/../idp/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/../idp/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/../idp/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/../idp/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/../idp/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/../idp/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/../idp/vendor/buzzingpixel/php-queue" />
+      <path value="$PROJECT_DIR$/../idp/vendor/doctrine/lexer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

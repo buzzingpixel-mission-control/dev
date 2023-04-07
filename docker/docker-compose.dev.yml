@@ -44,6 +44,24 @@ services:
       - traefik
       - default
 
+  queue-consumer-default-1:
+    restart: always
+    container_name: queue-consumer-default-1
+    volumes:
+      - ../backend:/var/www:delegated
+      - ../../backend-core:/backend-core
+      - ../../idp:/idp
+      - ../../../buzzingpixel/php-queue:/php-queue
+
+  queue-consumer-email-1:
+    restart: always
+    container_name: queue-consumer-email-1
+    volumes:
+      - ../backend:/var/www:delegated
+      - ../../backend-core:/backend-core
+      - ../../idp:/idp
+      - ../../../buzzingpixel/php-queue:/php-queue
+
   db:
     restart: always
     container_name: mission_control_db
