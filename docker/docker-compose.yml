@@ -71,6 +71,32 @@ services:
       && chmod +x /runner.sh
       && /runner.sh"
 
+  backend-scheduler:
+    deploy:
+      rollback_config:
+        order: start-first
+      update_config:
+        order: start-first
+    env_file:
+      - ./backend/.env
+      - ./backend/.env.local
+    image: ghcr.io/buzzingpixel-mission-control/mission-control-backend
+    environment:
+      - HOSTNAME=mission_control_backend_scheduler
+    networks:
+      - default
+    healthcheck:
+      test: ["CMD", "php", "/var/www/cli"]
+      interval: 5s
+      timeout: 5s
+      start_period: 10s
+      retries: 10
+    entrypoint: >-
+      /bin/bash -c
+      "echo 'while php /var/www/cli buzzingpixel-schedule:run --verbose --no-interaction 2>&1; do sleep 60; done' > /runner.sh
+      && chmod +x /runner.sh
+      && /runner.sh"
+
   db:
     deploy:
       rollback_config:

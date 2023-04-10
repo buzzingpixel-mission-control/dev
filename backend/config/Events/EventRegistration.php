@@ -8,6 +8,7 @@ use Config\DbConfig;
 use Config\Events\EventListeners\ApplyCliCommandsEventListener;
 use Config\Events\EventListeners\ApplyMiddlewareEventListener;
 use Config\Events\EventListeners\ApplyRoutesEventListener;
+use Config\Events\EventListeners\ApplyScheduleEventListener;
 use Config\MailerConfig;
 use Crell\Tukio\OrderedProviderInterface;
 use MissionControlIdp\EventListeners\EventRegistration as EventRegistrationIdp;
@@ -42,6 +43,11 @@ class EventRegistration
         $provider->addSubscriber(
             MailerConfig::class,
             MailerConfig::class,
+        );
+
+        $provider->addSubscriber(
+            ApplyScheduleEventListener::class,
+            ApplyScheduleEventListener::class,
         );
 
         /*

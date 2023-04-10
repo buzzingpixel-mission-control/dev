@@ -81,11 +81,13 @@
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/mime" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-intl-idn" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/buzzingpixel/php-scheduler" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Mission Control Backend Core" />
     <orderEntry type="module" module-name="MissionControlIdp" />
     <orderEntry type="module" module-name="php-queue" />
+    <orderEntry type="module" module-name="php-scheduler" />
   </component>
 </module>

@@ -14,7 +14,6 @@ services:
       - ../backend:/var/www:delegated
       - ../../backend-core:/backend-core
       - ../../idp:/idp
-      - ../../../buzzingpixel/php-queue:/php-queue
     labels:
       ## Traefik config ##
       - traefik.enable=true
@@ -51,7 +50,6 @@ services:
       - ../backend:/var/www:delegated
       - ../../backend-core:/backend-core
       - ../../idp:/idp
-      - ../../../buzzingpixel/php-queue:/php-queue
 
   queue-consumer-email-1:
     restart: always
@@ -60,7 +58,14 @@ services:
       - ../backend:/var/www:delegated
       - ../../backend-core:/backend-core
       - ../../idp:/idp
-      - ../../../buzzingpixel/php-queue:/php-queue
+
+  backend-scheduler:
+    restart: always
+    container_name: mission_control_backend_scheduler
+    volumes:
+      - ../backend:/var/www:delegated
+      - ../../backend-core:/backend-core
+      - ../../idp:/idp
 
   db:
     restart: always
