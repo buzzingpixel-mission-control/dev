@@ -28,7 +28,7 @@ class RegisterBindingsCache
 
                 assert($redis instanceof Redis);
 
-                return new RedisAdapter($redis, 'foo-bar');
+                return new RedisAdapter($redis);
             },
         );
     }

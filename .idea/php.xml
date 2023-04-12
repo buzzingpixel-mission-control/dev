@@ -292,6 +292,10 @@
       <path value="$PROJECT_DIR$/../idp/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/../backend-core/vendor/buzzingpixel/php-scheduler" />
       <path value="$PROJECT_DIR$/backend/vendor/buzzingpixel/php-scheduler" />
+      <path value="$PROJECT_DIR$/../idp/vendor/buzzingpixel/php-scheduler" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/httpsoft/http-cookie" />
+      <path value="$PROJECT_DIR$/backend/vendor/httpsoft/http-cookie" />
+      <path value="$PROJECT_DIR$/../idp/vendor/httpsoft/http-cookie" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

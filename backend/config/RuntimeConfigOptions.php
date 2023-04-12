@@ -30,4 +30,5 @@ enum RuntimeConfigOptions
     case SMTP_PASSWORD;
     case SMTP_HOST;
     case SMTP_PORT;
+    case COOKIE_DOMAIN;
 }

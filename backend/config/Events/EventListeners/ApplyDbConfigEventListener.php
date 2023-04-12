@@ -2,13 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Config;
+namespace Config\Events\EventListeners;
 
+use Config\RuntimeConfig;
+use Config\RuntimeConfigOptions;
 use MissionControlBackend\Persistence\ApplyDbConfigEvent;
 use MissionControlBackend\Persistence\DbAdapter;
 use MissionControlBackend\Persistence\DbConfig as DbConfigObject;
 
-readonly class DbConfig
+readonly class ApplyDbConfigEventListener
 {
     public function __construct(private RuntimeConfig $runtimeConfig)
     {

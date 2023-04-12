@@ -2,12 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Config;
+namespace Config\Events\EventListeners;
 
+use Config\RuntimeConfig;
+use Config\RuntimeConfigOptions;
 use MissionControlBackend\Mailer\ApplyMailerConfigEvent;
 use MissionControlBackend\Mailer\MailerConfig as MailerConfigObject;
 
-readonly class MailerConfig
+readonly class ApplyMailerConfigEventListener
 {
     public function __construct(private RuntimeConfig $runtimeConfig)
     {

@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Config\Events;
 
-use Config\DbConfig;
 use Config\Events\EventListeners\ApplyCliCommandsEventListener;
+use Config\Events\EventListeners\ApplyCookieConfigEventListener;
+use Config\Events\EventListeners\ApplyDbConfigEventListener;
+use Config\Events\EventListeners\ApplyMailerConfigEventListener;
 use Config\Events\EventListeners\ApplyMiddlewareEventListener;
 use Config\Events\EventListeners\ApplyRoutesEventListener;
 use Config\Events\EventListeners\ApplyScheduleEventListener;
-use Config\MailerConfig;
 use Crell\Tukio\OrderedProviderInterface;
 use MissionControlIdp\EventListeners\EventRegistration as EventRegistrationIdp;
 
@@ -26,6 +27,21 @@ class EventRegistration
         );
 
         $provider->addSubscriber(
+            ApplyCookieConfigEventListener::class,
+            ApplyCookieConfigEventListener::class,
+        );
+
+        $provider->addSubscriber(
+            ApplyDbConfigEventListener::class,
+            ApplyDbConfigEventListener::class,
+        );
+
+        $provider->addSubscriber(
+            ApplyMailerConfigEventListener::class,
+            ApplyMailerConfigEventListener::class,
+        );
+
+        $provider->addSubscriber(
             ApplyMiddlewareEventListener::class,
             ApplyMiddlewareEventListener::class,
         );
@@ -33,16 +49,6 @@ class EventRegistration
         $provider->addSubscriber(
             ApplyRoutesEventListener::class,
             ApplyRoutesEventListener::class,
-        );
-
-        $provider->addSubscriber(
-            DbConfig::class,
-            DbConfig::class,
-        );
-
-        $provider->addSubscriber(
-            MailerConfig::class,
-            MailerConfig::class,
         );
 
         $provider->addSubscriber(
