@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace MissionControlBackendApp\App;
 
 use function file_put_contents;
 

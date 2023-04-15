@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Config;
+namespace MissionControlBackendApp\Config;
 
 use function array_column;
 

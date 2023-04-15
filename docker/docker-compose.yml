@@ -116,6 +116,21 @@ services:
         aliases:
           - mission_control_db
 
+  frontend:
+    deploy:
+      rollback_config:
+        order: start-first
+      update_config:
+        order: start-first
+    env_file:
+      - ./frontend/.env
+      - ./frontend/.env.local
+    image: ghcr.io/buzzingpixel-mission-control/mission-control-frontend
+    environment:
+      - HOSTNAME=mission_control_frontend
+    networks:
+      - default
+
 volumes:
   db-volume:
   redis:

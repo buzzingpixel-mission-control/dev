@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use Config\BootHttpMiddlewareConfigFactory;
-use Config\CoreConfigFactory;
-use Config\Dependencies\DependencyBindings;
-use Config\Events\EventRegistration;
 use MissionControlBackend\Boot;
+use MissionControlBackendApp\Config\BootHttpMiddlewareConfigFactory;
+use MissionControlBackendApp\Config\CoreConfigFactory;
+use MissionControlBackendApp\Config\Dependencies\DependencyBindings;
+use MissionControlBackendApp\Config\Events\EventRegistration;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 

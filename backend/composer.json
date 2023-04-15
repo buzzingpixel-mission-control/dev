@@ -1,5 +1,5 @@
 {
-    "name": "buzzingpixel/mission-control",
+    "name": "buzzingpixel/mission-control-backend",
     "license": "proprietary",
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -33,8 +33,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Config\\": "config",
-            "App\\": "src"
+            "MissionControlBackendApp\\Config\\": "config",
+            "MissionControlBackendApp\\App\\": "src"
         }
     },
     "config": {

@@ -2,8 +2,8 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/backend/config" isTestSource="false" packagePrefix="Config\" />
-      <sourceFolder url="file://$MODULE_DIR$/backend/src" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/backend/config" isTestSource="false" packagePrefix="MissionControlBackendApp\Config\" />
+      <sourceFolder url="file://$MODULE_DIR$/backend/src" isTestSource="false" packagePrefix="MissionControlBackendApp\App\" />
       <sourceFolder url="file://$MODULE_DIR$/backend/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/squizlabs/php_codesniffer" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/slevomat/coding-standard" />
@@ -90,5 +90,6 @@
     <orderEntry type="module" module-name="MissionControlIdp" />
     <orderEntry type="module" module-name="php-queue" />
     <orderEntry type="module" module-name="php-scheduler" />
+    <orderEntry type="module" module-name="frontend-core" />
   </component>
 </module>

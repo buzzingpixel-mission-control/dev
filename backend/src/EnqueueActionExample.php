@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace MissionControlBackendApp\App;
 
 use BuzzingPixel\Queue\QueueHandler;
 use BuzzingPixel\Queue\QueueItem;
 use BuzzingPixel\Queue\QueueItemJob;
 use BuzzingPixel\Queue\QueueItemJobCollection;
-use Config\QueueName;
+use MissionControlBackendApp\Config\QueueName;
 
 use function dd;
 

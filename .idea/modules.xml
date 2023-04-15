@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/../backend-core/.idea/Mission Control Backend Core.iml" filepath="$PROJECT_DIR$/../backend-core/.idea/Mission Control Backend Core.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Mission Control Dev.iml" filepath="$PROJECT_DIR$/.idea/Mission Control Dev.iml" />
       <module fileurl="file://$PROJECT_DIR$/../idp/.idea/MissionControlIdp.iml" filepath="$PROJECT_DIR$/../idp/.idea/MissionControlIdp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../frontend-core/.idea/frontend-core.iml" filepath="$PROJECT_DIR$/../frontend-core/.idea/frontend-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../buzzingpixel/php-queue/.idea/php-queue.iml" filepath="$PROJECT_DIR$/../../buzzingpixel/php-queue/.idea/php-queue.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../buzzingpixel/php-scheduler/.idea/php-scheduler.iml" filepath="$PROJECT_DIR$/../../buzzingpixel/php-scheduler/.idea/php-scheduler.iml" />
     </modules>

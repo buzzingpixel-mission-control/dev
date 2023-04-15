@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Config\Events\EventListeners;
+namespace MissionControlBackendApp\Config\Events\EventListeners;
 
-use Config\RuntimeConfig;
-use Config\RuntimeConfigOptions;
 use MissionControlBackend\Cookies\ApplyCookieConfigEvent;
 use MissionControlBackend\Cookies\CookieConfig;
+use MissionControlBackendApp\Config\RuntimeConfig;
+use MissionControlBackendApp\Config\RuntimeConfigOptions;
 
 readonly class ApplyCookieConfigEventListener
 {

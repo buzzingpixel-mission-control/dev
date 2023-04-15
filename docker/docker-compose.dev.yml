@@ -108,6 +108,33 @@ services:
       - traefik.http.routers.mosaic_portal_mailhog-secure.rule=Host(`mailhog.mission-control.localtest.me`)
       - traefik.http.services.mosaic_portal_mailhog-secure.loadbalancer.server.port=8027
 
+  frontend:
+    restart: always
+    environment:
+      - ENABLE_PHP_DEV_CONFIG=1
+      - ENABLE_XDEBUG=1
+    container_name: mission_control_frontend
+    healthcheck:
+      disable: true
+    volumes:
+      - ./frontend/.bash_history:/root/.bash_history:delegated
+      - ../frontend:/var/www:delegated
+      - ../../frontend-core:/frontend-core
+    labels:
+      ## Traefik config ##
+      - traefik.enable=true
+      - traefik.docker.network=traefik-dev_default
+
+      - traefik.http.routers.mission_control_web.entrypoints=web
+      - traefik.http.routers.mission_control_web.rule=Host(`mission-control.localtest.me`)
+      - traefik.http.routers.mission_control_web.middlewares=https-redirect
+      - traefik.http.routers.mission_control_web-secure.entrypoints=websecure
+      - traefik.http.routers.mission_control_web-secure.tls=true
+      - traefik.http.routers.mission_control_web-secure.rule=Host(`mission-control.localtest.me`)
+    networks:
+      - traefik
+      - default
+
 networks:
   traefik:
     name: traefik-dev_default

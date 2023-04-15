@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Config;
+namespace MissionControlBackendApp\Config;
 
 use BuzzingPixel\Queue\QueueNames as QueueNamesInterface;
 use BuzzingPixel\Queue\QueueNamesDefault;

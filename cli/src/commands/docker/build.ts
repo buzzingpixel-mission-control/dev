@@ -8,6 +8,7 @@ export default class Build extends Command {
 
     public static images = [
         'backend',
+        'frontend',
     ];
 
     public static flags = {

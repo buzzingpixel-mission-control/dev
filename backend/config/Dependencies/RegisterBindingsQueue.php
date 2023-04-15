@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Config\Dependencies;
+namespace MissionControlBackendApp\Config\Dependencies;
 
 use BuzzingPixel\Queue\QueueHandler;
 use BuzzingPixel\Queue\QueueNames as QueueNamesInterface;
 use BuzzingPixel\Queue\RedisDriver\RedisQueueHandler;
-use Config\QueueNames;
 use MissionControlBackend\ContainerBindings;
+use MissionControlBackendApp\Config\QueueNames;
 
 class RegisterBindingsQueue
 {

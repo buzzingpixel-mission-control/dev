@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Config\SshKeys;
+namespace MissionControlBackendApp\Config\SshKeys;
 
 class SshKeys
 {

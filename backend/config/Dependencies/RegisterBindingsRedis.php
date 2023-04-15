@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Config\Dependencies;
+namespace MissionControlBackendApp\Config\Dependencies;
 
-use Config\RuntimeConfig;
-use Config\RuntimeConfigOptions;
 use MissionControlBackend\ContainerBindings;
+use MissionControlBackendApp\Config\RuntimeConfig;
+use MissionControlBackendApp\Config\RuntimeConfigOptions;
 use Redis;
 
 class RegisterBindingsRedis

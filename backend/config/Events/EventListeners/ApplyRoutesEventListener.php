@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Config\Events\EventListeners;
+namespace MissionControlBackendApp\Config\Events\EventListeners;
 
-use App\EnqueueActionExample;
 use MissionControlBackend\Http\ApiApplyRoutesEvent;
+use MissionControlBackendApp\App\EnqueueActionExample;
 
 class ApplyRoutesEventListener
 {

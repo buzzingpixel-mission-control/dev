@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Config\Events\EventListeners;
+namespace MissionControlBackendApp\Config\Events\EventListeners;
 
 use MissionControlBackend\Cli\ApplyCliCommandsEvent;
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Config\Dependencies;
+namespace MissionControlBackendApp\Config\Dependencies;
 
 use MissionControlBackend\ContainerBindings;
 use Psr\Cache\CacheItemPoolInterface;

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Config\Dependencies;
+namespace MissionControlBackendApp\Config\Dependencies;
 
-use Config\RuntimeConfig;
-use Config\RuntimeConfigOptions;
-use Config\SshKeys\SshKeys;
 use DateInterval;
 use MissionControlBackend\ContainerBindings;
+use MissionControlBackendApp\Config\RuntimeConfig;
+use MissionControlBackendApp\Config\RuntimeConfigOptions;
+use MissionControlBackendApp\Config\SshKeys\SshKeys;
 use MissionControlIdp\AuthorizationServerFactoryConfig;
 use MissionControlIdp\Client\Client;
 use MissionControlIdp\Client\ClientCollection;

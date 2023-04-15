@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Config\Events\EventListeners;
+namespace MissionControlBackendApp\Config\Events\EventListeners;
 
-use Config\RuntimeConfig;
-use Config\RuntimeConfigOptions;
 use MissionControlBackend\Persistence\ApplyDbConfigEvent;
 use MissionControlBackend\Persistence\DbAdapter;
 use MissionControlBackend\Persistence\DbConfig as DbConfigObject;
+use MissionControlBackendApp\Config\RuntimeConfig;
+use MissionControlBackendApp\Config\RuntimeConfigOptions;
 
 readonly class ApplyDbConfigEventListener
 {

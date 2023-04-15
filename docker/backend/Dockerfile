@@ -137,9 +137,10 @@ COPY ./docker/.profile /root/.profile
 COPY ./docker/.profile /root/.bashrc
 
 # Copy the application into the container
-#COPY backend /var/www
+COPY backend /var/www
 
+# TODO
 # Install composer dependencies
-#RUN composer install --no-interaction --no-ansi --no-progress --optimize-autoloader --no-dev
+# RUN composer install --no-interaction --no-ansi --no-progress --optimize-autoloader --no-dev
 
 ENTRYPOINT ["/init"]

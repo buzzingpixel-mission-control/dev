@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Config\Events\EventListeners;
+namespace MissionControlBackendApp\Config\Events\EventListeners;
 
-use Config\RuntimeConfig;
-use Config\RuntimeConfigOptions;
 use MissionControlBackend\Mailer\ApplyMailerConfigEvent;
 use MissionControlBackend\Mailer\MailerConfig as MailerConfigObject;
+use MissionControlBackendApp\Config\RuntimeConfig;
+use MissionControlBackendApp\Config\RuntimeConfigOptions;
 
 readonly class ApplyMailerConfigEventListener
 {

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Config\Events;
+namespace MissionControlBackendApp\Config\Events;
 
-use Config\Events\EventListeners\ApplyCliCommandsEventListener;
-use Config\Events\EventListeners\ApplyCookieConfigEventListener;
-use Config\Events\EventListeners\ApplyDbConfigEventListener;
-use Config\Events\EventListeners\ApplyMailerConfigEventListener;
-use Config\Events\EventListeners\ApplyMiddlewareEventListener;
-use Config\Events\EventListeners\ApplyRoutesEventListener;
-use Config\Events\EventListeners\ApplyScheduleEventListener;
 use Crell\Tukio\OrderedProviderInterface;
+use MissionControlBackendApp\Config\Events\EventListeners\ApplyCliCommandsEventListener;
+use MissionControlBackendApp\Config\Events\EventListeners\ApplyCookieConfigEventListener;
+use MissionControlBackendApp\Config\Events\EventListeners\ApplyDbConfigEventListener;
+use MissionControlBackendApp\Config\Events\EventListeners\ApplyMailerConfigEventListener;
+use MissionControlBackendApp\Config\Events\EventListeners\ApplyMiddlewareEventListener;
+use MissionControlBackendApp\Config\Events\EventListeners\ApplyRoutesEventListener;
+use MissionControlBackendApp\Config\Events\EventListeners\ApplyScheduleEventListener;
 use MissionControlIdp\EventListeners\EventRegistration as EventRegistrationIdp;
 
 class EventRegistration
