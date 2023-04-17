@@ -59,6 +59,7 @@
             "anonymous": "always",
             "named": "always",
             "asyncArrow": "always"
-        }]
+        }],
+        "max-len": 0
     }
 }

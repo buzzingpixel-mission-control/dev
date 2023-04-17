@@ -38,10 +38,14 @@
         "yargs": "^17.7.1"
     },
     "dependencies": {
+        "@headlessui/react": "^1.7.14",
+        "@heroicons/react": "^2.0.17",
         "buzzingpixel-mission-control-frontend-core": "file:../../frontend-core",
         "react": "^18.2.0",
         "react-component": "^0.0.0",
         "react-dom": "^18.2.0",
+        "react-router": "^6.10.0",
+        "react-router-dom": "^6.10.0",
         "sleep-promise": "^9.1.0"
     }
 }
