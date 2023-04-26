@@ -7,6 +7,14 @@ import { Configuration } from 'webpack';
 // @ts-ignore
 // eslint-disable-next-line import/no-extraneous-dependencies
 import TerserPlugin from 'terser-webpack-plugin';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import yargs from 'yargs';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { hideBin } from 'yargs/helpers';
+
+const { argv } = yargs(hideBin(process.argv));
+
+const mode = argv.mode || 'production';
 
 const config: Configuration = {
     entry: './assets/js/index.tsx',
@@ -29,7 +37,10 @@ const config: Configuration = {
     optimization: {
         minimizer: [new TerserPlugin({ extractComments: false })],
     },
-    devtool: 'eval-source-map',
 };
+
+if (mode === 'development') {
+    config.devtool = 'eval-source-map';
+}
 
 export default config;

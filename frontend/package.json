@@ -4,8 +4,10 @@
     "description": "Mission Control Frontend Core",
     "scripts": {
         "build": "yarn css && yarn js",
+        "build-prod": "yarn css && yarn js-prod",
         "css": "npx tailwindcss -i ./assets/css/main.css -o public/assets/css/main.css --minify",
-        "js": "webpack --mode development"
+        "js": "webpack --mode development",
+        "js-prod": "webpack"
     },
     "repository": {
         "type": "git",
@@ -40,6 +42,7 @@
     "dependencies": {
         "@headlessui/react": "^1.7.14",
         "@heroicons/react": "^2.0.17",
+        "@tailwindcss/forms": "^0.5.3",
         "buzzingpixel-mission-control-frontend-core": "file:../../frontend-core",
         "react": "^18.2.0",
         "react-component": "^0.0.0",

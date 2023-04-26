@@ -90,6 +90,6 @@
     <orderEntry type="module" module-name="MissionControlIdp" />
     <orderEntry type="module" module-name="php-queue" />
     <orderEntry type="module" module-name="php-scheduler" />
-    <orderEntry type="module" module-name="frontend-core" />
+    <orderEntry type="module" module-name="Mission Control Frontend Core" />
   </component>
 </module>

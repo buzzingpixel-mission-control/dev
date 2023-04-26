@@ -25,3 +25,9 @@
         transform: rotate(360deg);
     }
 }
+
+.react-select-control input {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}

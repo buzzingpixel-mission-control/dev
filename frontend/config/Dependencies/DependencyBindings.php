@@ -10,5 +10,6 @@ class DependencyBindings
 {
     public static function register(ContainerBindings $containerBindings): void
     {
+        RegisterBindingsRedis::register($containerBindings);
     }
 }

@@ -1,10 +1,10 @@
 #!/usr/bin/env php
 <?php
 
-use Config\CoreConfigFactory;
-use Config\Dependencies\DependencyBindings;
-use Config\Events\EventRegistration;
 use MissionControlBackend\Boot;
+use MissionControlBackendApp\Config\CoreConfigFactory;
+use MissionControlBackendApp\Config\Dependencies\DependencyBindings;
+use MissionControlBackendApp\Config\Events\EventRegistration;
 
 require __DIR__ . '/vendor/autoload.php';
 

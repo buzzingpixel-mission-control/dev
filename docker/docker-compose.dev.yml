@@ -40,8 +40,11 @@ services:
       - traefik.http.routers.mission_control_account-secure.tls=true
       - traefik.http.routers.mission_control_account-secure.rule=Host(`account.mission-control.localtest.me`)
     networks:
-      - traefik
-      - default
+      traefik:
+      default:
+        aliases:
+          - api.mission-control.localtest.me
+          - auth.mission-control.localtest.me
 
   queue-consumer-default-1:
     restart: always
@@ -132,8 +135,10 @@ services:
       - traefik.http.routers.mission_control_web-secure.tls=true
       - traefik.http.routers.mission_control_web-secure.rule=Host(`mission-control.localtest.me`)
     networks:
-      - traefik
-      - default
+      traefik:
+      default:
+        aliases:
+          - mission-control.localtest.me
 
 networks:
   traefik:
