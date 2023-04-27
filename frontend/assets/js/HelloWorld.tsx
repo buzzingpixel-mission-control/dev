@@ -1,14 +1,10 @@
 import React from 'react';
-import { setPageName, useRuntimeContext } from 'buzzingpixel-mission-control-frontend-core';
+import { usePageTitle } from 'buzzingpixel-mission-control-frontend-core';
 
 const HelloWorld = () => {
-    setPageName('Hello World');
+    usePageTitle('Hello World');
 
-    const runtimeContext = useRuntimeContext();
-
-    console.log(runtimeContext);
-
-    return <>Hello World</>;
+    return <div className="mb-6">Hello World</div>;
 };
 
 export default HelloWorld;

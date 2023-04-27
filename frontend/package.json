@@ -3,8 +3,8 @@
     "version": "0.0.1",
     "description": "Mission Control Frontend Core",
     "scripts": {
-        "build": "yarn css && yarn js",
-        "build-prod": "yarn css && yarn js-prod",
+        "build": "yarn js && yarn css",
+        "build-prod": "yarn js-prod && yarn css",
         "css": "npx tailwindcss -i ./assets/css/main.css -o public/assets/css/main.css --minify",
         "js": "webpack --mode development",
         "js-prod": "webpack"
