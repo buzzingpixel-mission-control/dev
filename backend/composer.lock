@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee769e0f918a5d7553dd20ea947f8555",
+    "content-hash": "9f165367a68813a7d8180d7c94ddb1a0",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -314,9 +314,10 @@
             "dist": {
                 "type": "path",
                 "url": "/backend-core",
-                "reference": "a0bea900f32a745cff197b498d275232c5c837f6"
+                "reference": "6f5fc721e9ca89bfc47e983c473e3b0f40fb82e6"
             },
             "require": {
+                "beberlei/assert": "^3.3",
                 "buzzingpixel/container": "^1.1",
                 "buzzingpixel/minify-middleware": "^1.1",
                 "buzzingpixel/php-queue": "^1.0",
@@ -399,6 +400,40 @@
             "autoload": {
                 "psr-4": {
                     "MissionControlIdp\\": "src"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "relative": false
+            }
+        },
+        {
+            "name": "buzzingpixel/mission-control-url-monitoring",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/url-monitoring",
+                "reference": "e5e368396da682373bada9c7472443b14264148f"
+            },
+            "require": {
+                "buzzingpixel/mission-control-backend-core": "dev-main",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^11.0.0",
+                "filp/whoops": "^2.14",
+                "phpstan/phpstan": "^1.10",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "phpstan/phpstan-strict-rules": "^1.5",
+                "squizlabs/php_codesniffer": "^3.6",
+                "symfony/var-dumper": "^6.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MissionControlUrlMonitoring\\": "src"
                 }
             },
             "license": [
@@ -6274,6 +6309,7 @@
     "stability-flags": {
         "buzzingpixel/mission-control-backend-core": 20,
         "buzzingpixel/mission-control-idp": 20,
+        "buzzingpixel/mission-control-url-monitoring": 20,
         "buzzingpixel/symfony-var-dumper-decorator": 20
     },
     "prefer-stable": true,

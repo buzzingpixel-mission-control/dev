@@ -1,5 +1,5 @@
 {
-    "name": "buzzingpixel-mission-control-frontend-core",
+    "name": "buzzingpixel-mission-control-frontend",
     "version": "0.0.1",
     "description": "Mission Control Frontend Core",
     "scripts": {
@@ -44,6 +44,7 @@
         "@heroicons/react": "^2.0.17",
         "@tailwindcss/forms": "^0.5.3",
         "buzzingpixel-mission-control-frontend-core": "file:../../frontend-core",
+        "buzzingpixel-mission-control-url-monitoring": "file:../../url-monitoring",
         "react": "^18.2.0",
         "react-component": "^0.0.0",
         "react-dom": "^18.2.0",

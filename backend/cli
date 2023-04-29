@@ -3,14 +3,14 @@
 
 use MissionControlBackend\Boot;
 use MissionControlBackendApp\Config\CoreConfigFactory;
-use MissionControlBackendApp\Config\Dependencies\DependencyBindings;
+use MissionControlBackendApp\Config\Dependencies\RegisterBindings;
 use MissionControlBackendApp\Config\Events\EventRegistration;
 
 require __DIR__ . '/vendor/autoload.php';
 
 (new Boot())
     ->start((new CoreConfigFactory)->create())
-    ->buildContainer([DependencyBindings::class, 'register'])
+    ->buildContainer([RegisterBindings::class, 'register'])
     ->registerEvents([EventRegistration::class, 'register'])
     ->buildCliApplication()
     ->applyCommands()

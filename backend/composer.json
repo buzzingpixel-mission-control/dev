@@ -11,6 +11,10 @@
         {
             "type": "path",
             "url": "/idp"
+        },
+        {
+            "type": "path",
+            "url": "/url-monitoring"
         }
     ],
     "require": {
@@ -19,7 +23,8 @@
         "ext-pdo": "*",
         "ext-redis": "*",
         "buzzingpixel/mission-control-backend-core": "dev-main",
-        "buzzingpixel/mission-control-idp": "dev-main"
+        "buzzingpixel/mission-control-idp": "dev-main",
+        "buzzingpixel/mission-control-url-monitoring": "dev-main"
     },
     "require-dev": {
         "buzzingpixel/symfony-var-dumper-decorator": "dev-main",

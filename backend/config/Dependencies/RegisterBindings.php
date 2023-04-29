@@ -6,8 +6,9 @@ namespace MissionControlBackendApp\Config\Dependencies;
 
 use MissionControlBackend\ContainerBindings;
 use MissionControlIdp\Dependencies\RegisterBindings as RegisterBindingsIdp;
+use MissionControlUrlMonitoring\Dependencies\RegisterBindings as RegisterBindingsUrlMonitoring;
 
-class DependencyBindings
+class RegisterBindings
 {
     public static function register(ContainerBindings $containerBindings): void
     {
@@ -19,5 +20,6 @@ class DependencyBindings
 
         // Package bindings
         RegisterBindingsIdp::register($containerBindings);
+        RegisterBindingsUrlMonitoring::register($containerBindings);
     }
 }

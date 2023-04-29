@@ -91,5 +91,6 @@
     <orderEntry type="module" module-name="php-queue" />
     <orderEntry type="module" module-name="php-scheduler" />
     <orderEntry type="module" module-name="Mission Control Frontend Core" />
+    <orderEntry type="module" module-name="Mission Control URL Monitoring" />
   </component>
 </module>

@@ -14,6 +14,7 @@ services:
       - ../backend:/var/www:delegated
       - ../../backend-core:/backend-core
       - ../../idp:/idp
+      - ../../url-monitoring:/url-monitoring
     labels:
       ## Traefik config ##
       - traefik.enable=true
@@ -53,6 +54,7 @@ services:
       - ../backend:/var/www:delegated
       - ../../backend-core:/backend-core
       - ../../idp:/idp
+      - ../../url-monitoring:/url-monitoring
 
   queue-consumer-email-1:
     restart: always
@@ -61,6 +63,7 @@ services:
       - ../backend:/var/www:delegated
       - ../../backend-core:/backend-core
       - ../../idp:/idp
+      - ../../url-monitoring:/url-monitoring
 
   backend-scheduler:
     restart: always
@@ -69,6 +72,7 @@ services:
       - ../backend:/var/www:delegated
       - ../../backend-core:/backend-core
       - ../../idp:/idp
+      - ../../url-monitoring:/url-monitoring
 
   db:
     restart: always

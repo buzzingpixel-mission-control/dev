@@ -13,6 +13,7 @@ use MissionControlBackendApp\Config\Events\EventListeners\ApplyMiddlewareEventLi
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyRoutesEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyScheduleEventListener;
 use MissionControlIdp\EventListeners\EventRegistration as EventRegistrationIdp;
+use MissionControlUrlMonitoring\EventListeners\EventRegistration as EventRegistrationUrlMonitoring;
 
 class EventRegistration
 {
@@ -60,5 +61,6 @@ class EventRegistration
          * Package bindings
          */
         EventRegistrationIdp::register($provider);
+        EventRegistrationUrlMonitoring::register($provider);
     }
 }

@@ -937,6 +937,11 @@ buffer-from@^1.0.0:
     sleep-promise "^9.1.0"
     zod "^3.21.4"
 
+"buzzingpixel-mission-control-url-monitoring@file:../../url-monitoring":
+  version "0.0.1"
+  dependencies:
+    buzzingpixel-mission-control-frontend-core "file:../../../../../../Users/tj/Library/Caches/Yarn/v6/npm-buzzingpixel-mission-control-url-monitoring-0.0.1-e7112ccf-2d63-461f-b9de-044d5a1a03a6-1682740055396/node_modules/frontend-core"
+
 call-bind@^1.0.0, call-bind@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/call-bind/-/call-bind-1.0.2.tgz#b1d4e89e688119c3c9a903ad30abb2f6a919be3c"
