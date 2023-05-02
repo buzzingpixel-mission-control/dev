@@ -296,6 +296,7 @@
       <path value="$PROJECT_DIR$/../backend-core/vendor/httpsoft/http-cookie" />
       <path value="$PROJECT_DIR$/backend/vendor/httpsoft/http-cookie" />
       <path value="$PROJECT_DIR$/../idp/vendor/httpsoft/http-cookie" />
+      <path value="$PROJECT_DIR$/backend/vendor/cocur/slugify" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
