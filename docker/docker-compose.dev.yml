@@ -65,6 +65,15 @@ services:
       - ../../idp:/idp
       - ../../url-monitoring:/url-monitoring
 
+  queue-consumer-url-monitoring-1:
+    restart: always
+    container_name: queue-consumer-url-monitoring-1
+    volumes:
+      - ../backend:/var/www:delegated
+      - ../../backend-core:/backend-core
+      - ../../idp:/idp
+      - ../../url-monitoring:/url-monitoring
+
   backend-scheduler:
     restart: always
     container_name: mission_control_backend_scheduler

@@ -10,6 +10,7 @@ enum QueueName
 {
     case default;
     case email;
+    case url_monitoring;
 
     /** @return string[] */
     public static function allAsStringArray(): array
