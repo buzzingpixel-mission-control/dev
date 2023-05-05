@@ -10,6 +10,7 @@ use MissionControlBackendApp\Config\Events\EventListeners\ApplyCookieConfigEvent
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyDbConfigEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyMailerConfigEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyMiddlewareEventListener;
+use MissionControlBackendApp\Config\Events\EventListeners\ApplyMonitoredUrlConfigEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyRoutesEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyScheduleEventListener;
 use MissionControlIdp\EventListeners\EventRegistration as EventRegistrationIdp;
@@ -55,6 +56,11 @@ class EventRegistration
         $provider->addSubscriber(
             ApplyScheduleEventListener::class,
             ApplyScheduleEventListener::class,
+        );
+
+        $provider->addSubscriber(
+            ApplyMonitoredUrlConfigEventListener::class,
+            ApplyMonitoredUrlConfigEventListener::class,
         );
 
         /*
