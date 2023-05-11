@@ -84,6 +84,11 @@
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/buzzingpixel/php-scheduler" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/httpsoft/http-cookie" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/cocur/slugify" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/league/pipeline" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

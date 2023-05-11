@@ -297,6 +297,15 @@
       <path value="$PROJECT_DIR$/backend/vendor/httpsoft/http-cookie" />
       <path value="$PROJECT_DIR$/../idp/vendor/httpsoft/http-cookie" />
       <path value="$PROJECT_DIR$/backend/vendor/cocur/slugify" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/backend/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/backend/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/backend/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/backend/vendor/league/pipeline" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/../backend-core/vendor/guzzlehttp/promises" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
