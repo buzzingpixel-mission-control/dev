@@ -20,7 +20,8 @@ export default class BackendPreUpProvisioning extends Command {
                     -v ${rootDir}/backend:/var/www \
                     -v ${parentDir}/backend-core:/backend-core \
                     -v ${parentDir}/idp:/idp \
-                    -v ${parentDir}/rl-monitoring:/url-monitoring \
+                    -v ${parentDir}/url-monitoring:/url-monitoring \
+                    -v ${parentDir}/pings:/pings \
                     -w /var/www \
                     ghcr.io/buzzingpixel-mission-control/mission-control-backend bash -c "composer install";
             `,
