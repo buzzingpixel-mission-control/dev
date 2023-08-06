@@ -13,11 +13,15 @@ use MissionControlBackendApp\Config\Events\EventListeners\ApplyMiddlewareEventLi
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyMonitoredUrlConfigEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyMonitoredUrlMailerConfigEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyMonitoredUrlSlackConfigEventListener;
+use MissionControlBackendApp\Config\Events\EventListeners\ApplyPingConfigEventListener;
+use MissionControlBackendApp\Config\Events\EventListeners\ApplyPingMailerConfigEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyRoutesEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyScheduleEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplySlackClientConfigEventListener;
-use MissionControlBackendApp\Config\Events\EventListeners\CreateNotificationAdaptersEventListener;
+use MissionControlBackendApp\Config\Events\EventListeners\CreateMonitoredUrlNotificationAdaptersEventListener;
+use MissionControlBackendApp\Config\Events\EventListeners\CreatePingNotificationAdaptersEventListener;
 use MissionControlIdp\EventListeners\EventRegistration as EventRegistrationIdp;
+use MissionControlPings\EventListeners\EventRegistration as EventRegistrationPings;
 use MissionControlUrlMonitoring\EventListeners\EventRegistration as EventRegistrationUrlMonitoring;
 
 class EventRegistration
@@ -68,8 +72,8 @@ class EventRegistration
         );
 
         $provider->addSubscriber(
-            CreateNotificationAdaptersEventListener::class,
-            CreateNotificationAdaptersEventListener::class,
+            CreateMonitoredUrlNotificationAdaptersEventListener::class,
+            CreateMonitoredUrlNotificationAdaptersEventListener::class,
         );
 
         $provider->addSubscriber(
@@ -85,6 +89,21 @@ class EventRegistration
         $provider->addSubscriber(
             ApplyMonitoredUrlMailerConfigEventListener::class,
             ApplyMonitoredUrlMailerConfigEventListener::class,
+        );
+
+        $provider->addSubscriber(
+            ApplyPingConfigEventListener::class,
+            ApplyPingConfigEventListener::class,
+        );
+
+        $provider->addSubscriber(
+            ApplyPingMailerConfigEventListener::class,
+            ApplyPingMailerConfigEventListener::class,
+        );
+
+        $provider->addSubscriber(
+            CreatePingNotificationAdaptersEventListener::class,
+            CreatePingNotificationAdaptersEventListener::class,
         );
 
         /*
@@ -92,5 +111,6 @@ class EventRegistration
          */
         EventRegistrationIdp::register($provider);
         EventRegistrationUrlMonitoring::register($provider);
+        EventRegistrationPings::register($provider);
     }
 }

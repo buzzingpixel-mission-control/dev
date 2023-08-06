@@ -15,6 +15,7 @@ services:
       - ../../backend-core:/backend-core
       - ../../idp:/idp
       - ../../url-monitoring:/url-monitoring
+      - ../../pings:/pings
     labels:
       ## Traefik config ##
       - traefik.enable=true
@@ -55,6 +56,7 @@ services:
       - ../../backend-core:/backend-core
       - ../../idp:/idp
       - ../../url-monitoring:/url-monitoring
+      - ../../pings:/pings
 
   queue-consumer-email-1:
     restart: always
@@ -64,6 +66,7 @@ services:
       - ../../backend-core:/backend-core
       - ../../idp:/idp
       - ../../url-monitoring:/url-monitoring
+      - ../../pings:/pings
 
   queue-consumer-url-monitoring-1:
     restart: always
@@ -73,6 +76,17 @@ services:
       - ../../backend-core:/backend-core
       - ../../idp:/idp
       - ../../url-monitoring:/url-monitoring
+      - ../../pings:/pings
+
+  queue-consumer-pings-1:
+    restart: always
+    container_name: queue-consumer-pings-1
+    volumes:
+      - ../backend:/var/www:delegated
+      - ../../backend-core:/backend-core
+      - ../../idp:/idp
+      - ../../url-monitoring:/url-monitoring
+      - ../../pings:/pings
 
   backend-scheduler:
     restart: always
@@ -82,6 +96,7 @@ services:
       - ../../backend-core:/backend-core
       - ../../idp:/idp
       - ../../url-monitoring:/url-monitoring
+      - ../../pings:/pings
 
   db:
     restart: always

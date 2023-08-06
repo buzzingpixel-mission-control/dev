@@ -8,7 +8,7 @@ use MissionControlUrlMonitoring\MonitoredUrls\Notifications\Adapters\CreateNotif
 use MissionControlUrlMonitoring\MonitoredUrls\Notifications\Adapters\Mailer\SendNotificationWithMailer;
 use MissionControlUrlMonitoring\MonitoredUrls\Notifications\Adapters\Slack\SendNotificationWithSlack;
 
-class CreateNotificationAdaptersEventListener
+class CreateMonitoredUrlNotificationAdaptersEventListener
 {
     public function onCreateNotificationAdapters(
         CreateNotificationAdaptersEvent $event,

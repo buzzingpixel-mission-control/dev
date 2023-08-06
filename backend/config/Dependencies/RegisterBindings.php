@@ -6,6 +6,7 @@ namespace MissionControlBackendApp\Config\Dependencies;
 
 use MissionControlBackend\ContainerBindings;
 use MissionControlIdp\Dependencies\RegisterBindings as RegisterBindingsIdp;
+use MissionControlPings\Dependencies\RegisterBindings as RegisterBindingsPings;
 use MissionControlUrlMonitoring\Dependencies\RegisterBindings as RegisterBindingsUrlMonitoring;
 
 class RegisterBindings
@@ -21,5 +22,6 @@ class RegisterBindings
         // Package bindings
         RegisterBindingsIdp::register($containerBindings);
         RegisterBindingsUrlMonitoring::register($containerBindings);
+        RegisterBindingsPings::register($containerBindings);
     }
 }

@@ -15,6 +15,10 @@
         {
             "type": "path",
             "url": "/url-monitoring"
+        },
+        {
+            "type": "path",
+            "url": "/pings"
         }
     ],
     "require": {
@@ -24,6 +28,7 @@
         "ext-redis": "*",
         "buzzingpixel/mission-control-backend-core": "dev-main",
         "buzzingpixel/mission-control-idp": "dev-main",
+        "buzzingpixel/mission-control-pings": "dev-main",
         "buzzingpixel/mission-control-url-monitoring": "dev-main"
     },
     "require-dev": {
