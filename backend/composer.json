@@ -19,6 +19,10 @@
         {
             "type": "path",
             "url": "/pings"
+        },
+        {
+            "type": "path",
+            "url": "/servers"
         }
     ],
     "require": {
@@ -29,6 +33,7 @@
         "buzzingpixel/mission-control-backend-core": "dev-main",
         "buzzingpixel/mission-control-idp": "dev-main",
         "buzzingpixel/mission-control-pings": "dev-main",
+        "buzzingpixel/mission-control-servers": "dev-main",
         "buzzingpixel/mission-control-url-monitoring": "dev-main"
     },
     "require-dev": {

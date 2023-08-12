@@ -22,6 +22,7 @@ use MissionControlBackendApp\Config\Events\EventListeners\CreateMonitoredUrlNoti
 use MissionControlBackendApp\Config\Events\EventListeners\CreatePingNotificationAdaptersEventListener;
 use MissionControlIdp\EventListeners\EventRegistration as EventRegistrationIdp;
 use MissionControlPings\EventListeners\EventRegistration as EventRegistrationPings;
+use MissionControlServers\EventListeners\EventRegistration as EventRegistrationServers;
 use MissionControlUrlMonitoring\EventListeners\EventRegistration as EventRegistrationUrlMonitoring;
 
 class EventRegistration
@@ -112,5 +113,6 @@ class EventRegistration
         EventRegistrationIdp::register($provider);
         EventRegistrationUrlMonitoring::register($provider);
         EventRegistrationPings::register($provider);
+        EventRegistrationServers::register($provider);
     }
 }

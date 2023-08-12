@@ -9,9 +9,16 @@ import {
     UrlMonitoringMenuItems,
     UrlMonitoringRoutes,
 } from 'buzzingpixel-mission-control-url-monitoring';
-import PingsMenuItems from 'buzzingpixel-mission-control-pings/dist/PingsMenuItems';
-import PingsRoutes from 'buzzingpixel-mission-control-pings/dist/PingsRoutes';
-import PingsBoot from 'buzzingpixel-mission-control-pings/dist/PingsBoot';
+import {
+    PingsBoot,
+    PingsMenuItems,
+    PingsRoutes,
+} from 'buzzingpixel-mission-control-pings';
+import {
+    ServersBoot,
+    ServersMenuItems,
+    ServersRoutes,
+} from 'buzzingpixel-mission-control-servers';
 import HelloWorld from './HelloWorld';
 
 const AppConfigFactory = (appContainer: HTMLElement): AppConfig => ({
@@ -19,6 +26,7 @@ const AppConfigFactory = (appContainer: HTMLElement): AppConfig => ({
     menuItems: () => [
         ...UrlMonitoringMenuItems(),
         ...PingsMenuItems(),
+        ...ServersMenuItems(),
         {
             name: 'Hello World',
             href: '/hello-world',
@@ -27,11 +35,13 @@ const AppConfigFactory = (appContainer: HTMLElement): AppConfig => ({
     routes: () => <>
         {UrlMonitoringRoutes()}
         {PingsRoutes()}
+        {ServersRoutes()}
         <Route path="/hello-world" element={<HelloWorld />} />
     </>,
     boot: () => {
         UrlMonitoringBoot();
         PingsBoot();
+        ServersBoot();
     },
 });
 

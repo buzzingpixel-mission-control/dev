@@ -45,6 +45,7 @@
         "@tailwindcss/forms": "^0.5.3",
         "buzzingpixel-mission-control-frontend-core": "file:../../frontend-core",
         "buzzingpixel-mission-control-pings": "file:../../pings",
+        "buzzingpixel-mission-control-servers": "file:../../servers",
         "buzzingpixel-mission-control-url-monitoring": "file:../../url-monitoring",
         "react": "^18.2.0",
         "react-component": "^0.0.0",

@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../backend-core/.idea/Mission Control Backend Core.iml" filepath="$PROJECT_DIR$/../backend-core/.idea/Mission Control Backend Core.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Mission Control Dev.iml" filepath="$PROJECT_DIR$/.idea/Mission Control Dev.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../frontend-core/.idea/Mission Control Frontend Core.iml" filepath="$PROJECT_DIR$/../frontend-core/.idea/Mission Control Frontend Core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../pings/.idea/Mission Control Pings.iml" filepath="$PROJECT_DIR$/../pings/.idea/Mission Control Pings.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../url-monitoring/.idea/Mission Control URL Monitoring.iml" filepath="$PROJECT_DIR$/../url-monitoring/.idea/Mission Control URL Monitoring.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../idp/.idea/MissionControlIdp.iml" filepath="$PROJECT_DIR$/../idp/.idea/MissionControlIdp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../buzzingpixel/php-queue/.idea/php-queue.iml" filepath="$PROJECT_DIR$/../../buzzingpixel/php-queue/.idea/php-queue.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../buzzingpixel/php-scheduler/.idea/php-scheduler.iml" filepath="$PROJECT_DIR$/../../buzzingpixel/php-scheduler/.idea/php-scheduler.iml" />
     </modules>
   </component>
 </project>

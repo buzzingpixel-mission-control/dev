@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b72b162dcf0e5d40c15dfc038467229",
+    "content-hash": "00ce7cb2459be912ff0941712426a85f",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -415,13 +415,15 @@
             "dist": {
                 "type": "path",
                 "url": "/pings",
-                "reference": "5664703298f867c303791599dcfa44ca25e3a454"
+                "reference": "4e471ff53d66de56e4d08536be2b0459b68e4ca2"
             },
             "require": {
                 "buzzingpixel/mission-control-backend-core": "dev-main",
                 "buzzingpixel/mission-control-idp": "dev-main",
+                "cocur/slugify": "^4.3",
                 "ext-pdo": "*",
                 "ext-redis": "*",
+                "league/pipeline": "^1.0",
                 "php": "^8.2"
             },
             "require-dev": {
@@ -437,6 +439,45 @@
             "autoload": {
                 "psr-4": {
                     "MissionControlPings\\": "src"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "relative": false
+            }
+        },
+        {
+            "name": "buzzingpixel/mission-control-servers",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/servers",
+                "reference": "cfef1b09317c3adacd2ba2f2cd2454ea3e44ec3f"
+            },
+            "require": {
+                "buzzingpixel/mission-control-backend-core": "dev-main",
+                "buzzingpixel/mission-control-idp": "dev-main",
+                "cocur/slugify": "^4.3",
+                "ext-pdo": "*",
+                "ext-redis": "*",
+                "league/pipeline": "^1.0",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^11.0.0",
+                "filp/whoops": "^2.14",
+                "phpstan/phpstan": "^1.10",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "phpstan/phpstan-strict-rules": "^1.5",
+                "squizlabs/php_codesniffer": "^3.6",
+                "symfony/var-dumper": "^6.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MissionControlServers\\": "src"
                 }
             },
             "license": [
@@ -6863,6 +6904,7 @@
     "stability-flags": {
         "buzzingpixel/mission-control-backend-core": 20,
         "buzzingpixel/mission-control-idp": 20,
+        "buzzingpixel/mission-control-pings": 20,
         "buzzingpixel/mission-control-url-monitoring": 20,
         "buzzingpixel/symfony-var-dumper-decorator": 20
     },

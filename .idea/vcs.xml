@@ -2,12 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../backend-core" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../frontend-core" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../idp" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../pings" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../url-monitoring" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../../buzzingpixel/php-queue" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../../buzzingpixel/php-scheduler" vcs="Git" />
   </component>
 </project>

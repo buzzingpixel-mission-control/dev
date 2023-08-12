@@ -16,6 +16,7 @@ services:
       - ../../idp:/idp
       - ../../url-monitoring:/url-monitoring
       - ../../pings:/pings
+      - ../../servers:/servers
     labels:
       ## Traefik config ##
       - traefik.enable=true
@@ -57,6 +58,7 @@ services:
       - ../../idp:/idp
       - ../../url-monitoring:/url-monitoring
       - ../../pings:/pings
+      - ../../servers:/servers
 
   queue-consumer-email-1:
     restart: always
@@ -67,6 +69,7 @@ services:
       - ../../idp:/idp
       - ../../url-monitoring:/url-monitoring
       - ../../pings:/pings
+      - ../../servers:/servers
 
   queue-consumer-url-monitoring-1:
     restart: always
@@ -77,6 +80,7 @@ services:
       - ../../idp:/idp
       - ../../url-monitoring:/url-monitoring
       - ../../pings:/pings
+      - ../../servers:/servers
 
   queue-consumer-pings-1:
     restart: always
@@ -87,6 +91,7 @@ services:
       - ../../idp:/idp
       - ../../url-monitoring:/url-monitoring
       - ../../pings:/pings
+      - ../../servers:/servers
 
   backend-scheduler:
     restart: always
@@ -97,6 +102,7 @@ services:
       - ../../idp:/idp
       - ../../url-monitoring:/url-monitoring
       - ../../pings:/pings
+      - ../../servers:/servers
 
   db:
     restart: always
