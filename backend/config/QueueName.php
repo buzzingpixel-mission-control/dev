@@ -12,6 +12,7 @@ enum QueueName
     case email;
     case url_monitoring;
     case pings;
+    case pipelines;
 
     /** @return string[] */
     public static function allAsStringArray(): array

@@ -5,7 +5,7 @@ services:
     restart: always
     environment:
       - ENABLE_PHP_DEV_CONFIG=1
-      - ENABLE_XDEBUG=1
+      - ENABLE_XDEBUG=0
     container_name: mission_control_backend
     healthcheck:
       disable: true
@@ -149,7 +149,7 @@ services:
     restart: always
     environment:
       - ENABLE_PHP_DEV_CONFIG=1
-      - ENABLE_XDEBUG=1
+      - ENABLE_XDEBUG=0
     container_name: mission_control_frontend
     healthcheck:
       disable: true

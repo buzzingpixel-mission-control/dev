@@ -4,13 +4,8 @@
     <option name="directories">
       <list>
         <option value="$PROJECT_DIR$/../backend-core/tests" />
-        <option value="$PROJECT_DIR$/../backend-core/tests" />
         <option value="$PROJECT_DIR$/backend/tests" />
-        <option value="$PROJECT_DIR$/../backend-core/tests" />
         <option value="$PROJECT_DIR$/../idp/tests" />
-        <option value="$PROJECT_DIR$/backend/tests" />
-        <option value="$PROJECT_DIR$/backend/tests" />
-        <option value="$PROJECT_DIR$/../backend-core/tests" />
       </list>
     </option>
   </component>

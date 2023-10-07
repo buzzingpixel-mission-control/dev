@@ -306,6 +306,8 @@
       <path value="$PROJECT_DIR$/../backend-core/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/../backend-core/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/../backend-core/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/backend/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/backend/vendor/phpseclib/phpseclib" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

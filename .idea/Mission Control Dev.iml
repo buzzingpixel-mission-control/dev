@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/backend/config" isTestSource="false" packagePrefix="MissionControlBackendApp\Config\" />
       <sourceFolder url="file://$MODULE_DIR$/backend/src" isTestSource="false" packagePrefix="MissionControlBackendApp\App\" />
+      <sourceFolder url="file://$MODULE_DIR$/backend/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/squizlabs/php_codesniffer" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/slevomat/coding-standard" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/doctrine/coding-standard" />
@@ -88,6 +89,8 @@
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/psr/http-client" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/league/pipeline" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/paragonie/constant_time_encoding" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/phpseclib/phpseclib" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -15,6 +15,7 @@ use MissionControlBackendApp\Config\Events\EventListeners\ApplyMonitoredUrlMaile
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyMonitoredUrlSlackConfigEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyPingConfigEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyPingMailerConfigEventListener;
+use MissionControlBackendApp\Config\Events\EventListeners\ApplyPipelinesConfigEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyRoutesEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplyScheduleEventListener;
 use MissionControlBackendApp\Config\Events\EventListeners\ApplySlackClientConfigEventListener;
@@ -105,6 +106,11 @@ class EventRegistration
         $provider->addSubscriber(
             CreatePingNotificationAdaptersEventListener::class,
             CreatePingNotificationAdaptersEventListener::class,
+        );
+
+        $provider->addSubscriber(
+            ApplyPipelinesConfigEventListener::class,
+            ApplyPipelinesConfigEventListener::class,
         );
 
         /*
