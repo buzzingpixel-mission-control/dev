@@ -49,6 +49,10 @@ services:
           - api.mission-control.localtest.me
           - auth.mission-control.localtest.me
 
+  redis:
+    ports:
+      - "56935:6379"
+
   queue-consumer-default-1:
     restart: always
     container_name: queue-consumer-default-1
@@ -85,6 +89,17 @@ services:
   queue-consumer-pings-1:
     restart: always
     container_name: queue-consumer-pings-1
+    volumes:
+      - ../backend:/var/www:delegated
+      - ../../backend-core:/backend-core
+      - ../../idp:/idp
+      - ../../url-monitoring:/url-monitoring
+      - ../../pings:/pings
+      - ../../servers:/servers
+
+  queue-consumer-pipelines-1:
+    restart: always
+    container_name: queue-consumer-pipelines-1
     volumes:
       - ../backend:/var/www:delegated
       - ../../backend-core:/backend-core
