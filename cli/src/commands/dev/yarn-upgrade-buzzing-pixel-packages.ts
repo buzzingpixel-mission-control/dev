@@ -14,6 +14,7 @@ export default class YarnUpgradeBuzzingPixelPackages extends Command {
                 buzzingpixel-mission-control-frontend-core \
                 buzzingpixel-mission-control-pings \
                 buzzingpixel-mission-control-servers \
+                buzzingpixel-mission-control-tickets \
                 buzzingpixel-mission-control-url-monitoring \
              ;
         `, { stdio: 'inherit' });

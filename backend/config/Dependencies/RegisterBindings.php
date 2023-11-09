@@ -8,6 +8,7 @@ use MissionControlBackend\ContainerBindings;
 use MissionControlIdp\Dependencies\RegisterBindings as RegisterBindingsIdp;
 use MissionControlPings\Dependencies\RegisterBindings as RegisterBindingsPings;
 use MissionControlServers\Dependencies\RegisterBindings as RegisterBindingsServers;
+use MissionControlTickets\Dependencies\RegisterBindings as RegisterBindingsTickets;
 use MissionControlUrlMonitoring\Dependencies\RegisterBindings as RegisterBindingsUrlMonitoring;
 
 class RegisterBindings
@@ -25,5 +26,6 @@ class RegisterBindings
         RegisterBindingsUrlMonitoring::register($containerBindings);
         RegisterBindingsPings::register($containerBindings);
         RegisterBindingsServers::register($containerBindings);
+        RegisterBindingsTickets::register($containerBindings);
     }
 }

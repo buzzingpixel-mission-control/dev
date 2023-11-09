@@ -12,6 +12,7 @@ export default class RemoveLinkedNodeModules extends Command {
             rm -rf node_modules/buzzingpixel-mission-control-frontend-core/node_modules;
             rm -rf node_modules/buzzingpixel-mission-control-pings/node_modules;
             rm -rf node_modules/buzzingpixel-mission-control-servers/node_modules;
+            rm -rf node_modules/buzzingpixel-mission-control-tickets/node_modules;
             rm -rf node_modules/buzzingpixel-mission-control-url-monitoring/node_modules;
         `, { stdio: 'inherit' });
     }

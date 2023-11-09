@@ -1,3 +1,4 @@
+#file: noinspection ComposeMissingKeys
 version: '3.8'
 
 services:
@@ -17,6 +18,7 @@ services:
       - ../../url-monitoring:/url-monitoring
       - ../../pings:/pings
       - ../../servers:/servers
+      - ../../tickets:/tickets
     labels:
       ## Traefik config ##
       - traefik.enable=true
@@ -63,6 +65,7 @@ services:
       - ../../url-monitoring:/url-monitoring
       - ../../pings:/pings
       - ../../servers:/servers
+      - ../../tickets:/tickets
 
   queue-consumer-email-1:
     restart: always
@@ -74,6 +77,7 @@ services:
       - ../../url-monitoring:/url-monitoring
       - ../../pings:/pings
       - ../../servers:/servers
+      - ../../tickets:/tickets
 
   queue-consumer-url-monitoring-1:
     restart: always
@@ -85,6 +89,7 @@ services:
       - ../../url-monitoring:/url-monitoring
       - ../../pings:/pings
       - ../../servers:/servers
+      - ../../tickets:/tickets
 
   queue-consumer-pings-1:
     restart: always
@@ -96,6 +101,7 @@ services:
       - ../../url-monitoring:/url-monitoring
       - ../../pings:/pings
       - ../../servers:/servers
+      - ../../tickets:/tickets
 
   queue-consumer-pipelines-1:
     restart: always
@@ -107,6 +113,7 @@ services:
       - ../../url-monitoring:/url-monitoring
       - ../../pings:/pings
       - ../../servers:/servers
+      - ../../tickets:/tickets
 
   backend-scheduler:
     restart: always
@@ -118,6 +125,7 @@ services:
       - ../../url-monitoring:/url-monitoring
       - ../../pings:/pings
       - ../../servers:/servers
+      - ../../tickets:/tickets
 
   db:
     restart: always

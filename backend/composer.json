@@ -23,6 +23,10 @@
         {
             "type": "path",
             "url": "/servers"
+        },
+        {
+            "type": "path",
+            "url": "/tickets"
         }
     ],
     "require": {
@@ -34,6 +38,7 @@
         "buzzingpixel/mission-control-idp": "dev-main",
         "buzzingpixel/mission-control-pings": "dev-main",
         "buzzingpixel/mission-control-servers": "dev-main",
+        "buzzingpixel/mission-control-tickets": "dev-main",
         "buzzingpixel/mission-control-url-monitoring": "dev-main"
     },
     "require-dev": {

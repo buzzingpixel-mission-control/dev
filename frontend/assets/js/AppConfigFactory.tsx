@@ -5,11 +5,6 @@ import {
 } from 'buzzingpixel-mission-control-frontend-core';
 import { Route } from 'react-router';
 import {
-    UrlMonitoringBoot,
-    UrlMonitoringMenuItems,
-    UrlMonitoringRoutes,
-} from 'buzzingpixel-mission-control-url-monitoring';
-import {
     PingsBoot,
     PingsMenuItems,
     PingsRoutes,
@@ -19,6 +14,16 @@ import {
     ServersMenuItems,
     ServersRoutes,
 } from 'buzzingpixel-mission-control-servers';
+import {
+    TicketsBoot,
+    TicketsMenuItems,
+    TicketsRoutes,
+} from 'buzzingpixel-mission-control-tickets';
+import {
+    UrlMonitoringBoot,
+    UrlMonitoringMenuItems,
+    UrlMonitoringRoutes,
+} from 'buzzingpixel-mission-control-url-monitoring';
 import HelloWorld from './HelloWorld';
 
 const AppConfigFactory = (appContainer: HTMLElement): AppConfig => ({
@@ -27,6 +32,7 @@ const AppConfigFactory = (appContainer: HTMLElement): AppConfig => ({
         ...UrlMonitoringMenuItems(),
         ...PingsMenuItems(),
         ...ServersMenuItems(),
+        ...TicketsMenuItems(),
         {
             name: 'Hello World',
             href: '/hello-world',
@@ -36,12 +42,14 @@ const AppConfigFactory = (appContainer: HTMLElement): AppConfig => ({
         {UrlMonitoringRoutes()}
         {PingsRoutes()}
         {ServersRoutes()}
+        {TicketsRoutes()}
         <Route path="/hello-world" element={<HelloWorld />} />
     </>,
     boot: () => {
         UrlMonitoringBoot();
         PingsBoot();
         ServersBoot();
+        TicketsBoot();
     },
 });
 
