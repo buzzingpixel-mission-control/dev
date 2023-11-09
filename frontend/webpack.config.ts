@@ -25,10 +25,17 @@ const config: Configuration = {
                 exclude: /node_modules/,
                 use: 'ts-loader',
             },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                ],
+            },
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.jsx', '.js'],
+        extensions: ['.tsx', '.ts', '.jsx', '.js', '.css'],
     },
     output: {
         path: path.resolve(__dirname, 'public/assets/js'),
